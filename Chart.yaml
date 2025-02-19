@@ -1,0 +1,3 @@
+apiVersion: v2
+name: practice-argo
+version: 1.0.0
