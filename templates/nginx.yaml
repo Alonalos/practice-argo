@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: my-nginx-server-new
+  name: my-nginx-server-{{values.global.env}}
 ----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -21,7 +21,7 @@ spec:
         replicaCount: 5
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: my-nginx-server-new                  
+    namespace: my-nginx-server-{{values.global.env}}                  
   syncPolicy:
     automated:
       prune: true                             
