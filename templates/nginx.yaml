@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-nginx-app
+  name: my-nginx-app-{{ .Values.global.env }} 
   namespace: argocd
 spec:
   project: default
