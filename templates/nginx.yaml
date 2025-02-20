@@ -13,7 +13,7 @@ spec:
       values: |
         service:
           type: LoadBalancer
-        replicaCount: 5
+        replicaCount: 2
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: my-nginx-server-{{ .Values.global.env }}              
