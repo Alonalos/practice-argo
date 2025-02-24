@@ -14,6 +14,8 @@ spec:
         service:
           type: LoadBalancer
         replicaCount: 2
+        updateStrategy:
+          type: RollingUpdate
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: my-nginx-server-{{ .Values.global.env }}              
