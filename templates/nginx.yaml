@@ -13,10 +13,7 @@ spec:
       values: |
         service:
           type: LoadBalancer
-        replicaCount: 2
-        image:
-          tag: "1.25.3"
-        updateStrategy:
+        replicaCount: 3
           type: RollingUpdate
   destination:
     server: 'https://kubernetes.default.svc'
